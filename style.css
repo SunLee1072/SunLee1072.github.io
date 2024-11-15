@@ -1,22 +1,39 @@
 body {
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
 .center {
     text-align: center;
 }
+#intro {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+}
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+}
 #name {
-    font-size: 5rem;
+    font-size: 4rem;
     cursor: pointer;
 }
 #click-instruction {
     font-size: 1.2rem;
 }
 #contents {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
     display: none;
 }
 #contents ul {
@@ -24,16 +41,41 @@ body {
     padding: 0;
 }
 #contents button {
-    background: none;
+    background: #fff;
+    color: #2193b0;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+#contents button:hover {
+    background: #2193b0;
+    color: #fff;
 }
 #detail {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
     display: none;
 }
 #content-detail {
     font-size: 1.5rem;
     margin-bottom: 20px;
+}
+#detail button {
+    background: #fff;
+    color: #2193b0;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+#detail button:hover {
+    background: #2193b0;
+    color: #fff;
 }
