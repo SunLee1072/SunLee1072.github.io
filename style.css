@@ -1,4 +1,4 @@
-
+/* 전체 배경 및 초기 스타일 설정 */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,6 +7,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* 이름과 포트폴리오 텍스트가 중앙에 나타나도록 설정 */
 #intro {
     display: flex;
     flex-direction: column;
@@ -27,17 +28,47 @@ body, html {
 
 #subtitle {
     font-size: 1.5em;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-top: 10px;
-    transition: opacity 1s ease;
 }
 
+#instructions {
+    font-size: 1em;
+    opacity: 0.7;
+    margin-top: 5px;
+}
 
+/* 콘텐츠 섹션 숨기기 */
 #content {
     display: none;
     padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-y: auto;
+    height: 100vh;
 }
 
+#content h2, #content h3 {
+    color: #0056b3;
+}
+
+/* 돌아가기 버튼 스타일 */
+#back-button {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #003d7a;
+}
+
+/* 페이드아웃 애니메이션 */
 .hidden {
     opacity: 0;
 }
