@@ -14,11 +14,16 @@
     </div>
     <div id="contents" class="hidden">
         <ul>
-            <li><button onclick="showContent(1)">1. contents</button></li>
-            <li><button onclick="showContent(2)">2. contents</button></li>
-            <!-- Add more contents here -->
+            <li><button onclick="showContent(1)">1. Major/Minor</button></li>
+            <li><button onclick="showContent(2)">2. Where I Worked</button></li>
+            <li><button onclick="showContent(3)">3. My Strength</button></li>
+            <li><button onclick="showContent(4)">4. Contact Info</button></li>
         </ul>
+        <button onclick="goToIntro()">Go Back</button>
+    </div>
+    <div id="detail" class="hidden center">
+        <div id="content-detail"></div>
+        <button onclick="goBack()">Go Back</button>
     </div>
 </body>
-
 </html>
