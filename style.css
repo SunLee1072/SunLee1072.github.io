@@ -1,74 +1,43 @@
 
-body {
-    font-family: 'Arial', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
-header {
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: #0056b3;
     color: white;
-    padding: 20px 10px;
     text-align: center;
+    cursor: pointer;
 }
 
-.header-content h1 {
+#name {
+    font-size: 4em;
     margin: 0;
-    font-size: 2.5em;
+    transition: opacity 1s ease;
 }
 
-header p {
-    font-size: 1.2em;
+#subtitle {
+    font-size: 1.5em;
+    opacity: 0.8;
+    margin-top: 10px;
+    transition: opacity 1s ease;
 }
 
-nav {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #00bfff;
-}
-
-.content-section {
-    margin: 20px;
+#content {
+    display: none;
     padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content-section h2 {
-    margin-top: 0;
-    color: #0056b3;
-}
-
-footer {
-    text-align: center;
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
+.hidden {
+    opacity: 0;
 }
