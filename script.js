@@ -1,9 +1,10 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    const profileSection = document.querySelector('.profile-section');
-    profileSection.style.opacity = 0;
-    profileSection.style.transition = 'opacity 1.5s ease-in-out';
-    setTimeout(() => {
-        profileSection.style.opacity = 1;
-    }, 500);
-});
+    document.getElementById("name").addEventListener("click", function() {
+        document.getElementById("intro").style.display = "none";
+        document.getElementById("contents").style.display = "block";
+    });
+
+    function showContent(contentId) {
+        alert('Contents ' + contentId + ' clicked!');
+        // Here you can add further logic to display the content in detail
+    }
