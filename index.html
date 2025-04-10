@@ -1,30 +1,70 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sun Lee's Profile</title>
+    <title>Changsun Lee's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <div id="intro" class="center">
-        <img src="profile.jpg" alt="Profile Picture" id="profile-pic">
-        <h1 id="name">Sun Lee</h1>
-        <p id="click-instruction">click my name</p>
-    </div>
-    <div id="contents" class="hidden">
-        <ul>
-            <li><button onclick="showContent(1)">1. Major/Minor</button></li>
-            <li><button onclick="showContent(2)">2. Where I Worked</button></li>
-            <li><button onclick="showContent(3)">3. My Strength</button></li>
-            <li><button onclick="showContent(4)">4. Contact Info</button></li>
-        </ul>
-        <button onclick="goToIntro()">Go Back</button>
-    </div>
-    <div id="detail" class="hidden center">
-        <div id="content-detail"></div>
-        <button onclick="goBack()">Go Back</button>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="Changsun Lee.jpg" alt="Profile" class="profile-pic">
+            <h1>Changsun Lee</h1>
+            <p>📍 Galesburg, IL</p>
+            <p>📞 (309) 832-2942</p>
+            <p>✉️ chlee@knox.edu</p>
+        </aside>
+
+        <!-- Main content -->
+        <main class="content">
+            <section>
+                <h2>Profile</h2>
+                <p>Detail-oriented and curious computer science student seeking a summer internship to apply my skills in programming, problem-solving, and collaborative project development. Passionate about building practical, innovative solutions and eager to gain real-world experience in a professional tech environment.</p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <p><strong>B.A. in Computer and Information Science</strong>, Knox College, Galesburg, IL<br>
+                GPA: 3.81/4.00 - Expected June 2027<br>
+                Minor: Deciding<br>
+                Relevant Courses: Applied Data Structures, Artificial Intelligence, Algorithm Design & Analysis, Principles of Accounting</p>
+            </section>
+
+            <section>
+                <h2>Knox Experience</h2>
+                <ul>
+                    <li><strong>Treasurer</strong>, Korean Club, Jan 2024 – Present</li>
+                    <li><strong>Treasurer</strong>, TKE Delta Chapter, Oct 2024 – Present</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <p><strong>Social Service Personnel</strong>, KB Golden Life Care, Seoul (Nov 2020 – Aug 2022)</p>
+                <ul>
+                    <li>Led event planning for elderly residents in a nursing home</li>
+                    <li>Provided daily support and companionship</li>
+            </section>
+
+            <section>
+                <h2>Professional Development</h2>
+                <ul>
+                    <li>Developed a basic web server using C# and .NET</li>
+                    <li>Created this personal website using HTML, CSS, JS</li>
+                    <li>Practiced version control with Git & GitHub</li>
+                    <li>Volunteered at 2018 PyeongChang Winter Olympics</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Technical Skills</h2>
+                <p><strong>Languages & Tools:</strong> C#, Java, Haskell, Python, HTML, CSS, JavaScript, Git, GitHub</p>
+                <p><strong>Currently Learning:</strong> Python</p>
+                <p><strong>Interest Areas:</strong> AI, Backend Development</p>
+            </section>
+        </main>
     </div>
 </body>
 </html>
