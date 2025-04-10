@@ -1,81 +1,141 @@
+/* style.css with Dark Mode (Fixed Layout Issues) */
+
+:root {
+    --bg-gradient: linear-gradient(to bottom right, #c9d6ff, #e2e2e2);
+    --text-color: #333;
+    --card-bg: white;
+    --heading-color: #1f2937;
+    --sidebar-bg: #1f2937;
+    --sidebar-text: white;
+}
+
+body.dark-mode {
+    --bg-gradient: linear-gradient(to bottom right, #111827, #1f2937);
+    --text-color: #e5e7eb;
+    --card-bg: #374151;
+    --heading-color: #93c5fd;
+    --sidebar-bg: #111827;
+    --sidebar-text: #f9fafb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    background: var(--bg-gradient);
+    color: var(--text-color);
 }
-.center {
-    text-align: center;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: auto;
 }
-#intro {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 15px;
+
+.sidebar {
+    width: 25%;
+    min-width: 250px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
-#profile-pic {
+
+.profile-pic {
     width: 150px;
     height: 150px;
+    max-width: 100%;
     border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid #fff;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 1.5rem;
 }
-#name {
-    font-size: 4rem;
-    cursor: pointer;
+
+.sidebar h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
-#click-instruction {
-    font-size: 1.2rem;
+
+.sidebar p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
 }
-#contents {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 15px;
-    display: none;
+
+.content {
+    width: 75%;
+    padding: 2rem;
+    overflow-y: auto;
 }
-#contents ul {
-    list-style-type: none;
-    padding: 0;
-}
-#contents button {
-    background: #fff;
-    color: #2193b0;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 10px;
-    padding: 10px 20px;
+
+.content section {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
     border-radius: 10px;
-    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-#contents button:hover {
-    background: #2193b0;
-    color: #fff;
+
+.content h2 {
+    color: var(--heading-color);
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #d1d5db;
+    padding-bottom: 0.3rem;
 }
-#detail {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 15px;
-    display: none;
+
+.content p, .content li {
+    font-size: 1rem;
+    line-height: 1.6;
 }
-#content-detail {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+
+.content ul {
+    padding-left: 1.2rem;
 }
-#detail button {
-    background: #fff;
-    color: #2193b0;
+
+/* Dark mode toggle button */
+.toggle-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #1f2937;
+    color: white;
     border: none;
-    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background 0.3s, color 0.3s;
+    font-size: 0.9rem;
+    z-index: 1000;
 }
-#detail button:hover {
-    background: #2193b0;
-    color: #fff;
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar h1 {
+        font-size: 1.3rem;
+    }
 }
