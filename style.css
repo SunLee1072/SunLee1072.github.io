@@ -1,16 +1,16 @@
-/* style.css with Dark Mode (Fixed Layout Issues) */
+/* style.css with Left Sidebar and White Background */
 
 :root {
-    --bg-gradient: linear-gradient(to bottom right, #c9d6ff, #e2e2e2);
-    --text-color: #333;
-    --card-bg: white;
-    --heading-color: #1f2937;
-    --sidebar-bg: #1f2937;
-    --sidebar-text: white;
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --card-bg: #ffffff;
+    --heading-color: #111827;
+    --sidebar-bg: #f3f4f6;
+    --sidebar-text: #111827;
 }
 
 body.dark-mode {
-    --bg-gradient: linear-gradient(to bottom right, #111827, #1f2937);
+    --bg-color: #1f2937;
     --text-color: #e5e7eb;
     --card-bg: #374151;
     --heading-color: #93c5fd;
@@ -25,15 +25,13 @@ body.dark-mode {
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-gradient);
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
 .container {
     display: flex;
-    flex-direction: row;
     min-height: 100vh;
-    height: auto;
 }
 
 .sidebar {
@@ -45,33 +43,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #e5e7eb;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
-    max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid var(--heading-color);
     margin-bottom: 1.5rem;
 }
 
 .sidebar h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .sidebar p {
     margin: 0.3rem 0;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .content {
-    width: 75%;
+    margin-left: 25%;
     padding: 2rem;
-    overflow-y: auto;
+    width: 75%;
+    background-color: var(--bg-color);
 }
 
 .content section {
@@ -79,13 +82,13 @@ body {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .content h2 {
     color: var(--heading-color);
     margin-bottom: 0.75rem;
-    border-bottom: 2px solid #d1d5db;
+    border-bottom: 1px solid #d1d5db;
     padding-bottom: 0.3rem;
 }
 
@@ -98,9 +101,8 @@ body {
     padding-left: 1.2rem;
 }
 
-/* Dark mode toggle button */
 .toggle-btn {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
     background: #1f2937;
@@ -120,12 +122,17 @@ body {
 
     .sidebar {
         width: 100%;
+        height: auto;
+        position: relative;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
     }
 
     .content {
+        margin-left: 0;
         width: 100%;
         padding: 1rem;
     }
